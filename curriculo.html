@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Leonardo</title>
+    <link rel="stylesheet" href="/styles/index.css">
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <nav class="cabecalho__nav">
+            <a href="index.html" class="cabecalho__nav_link">Home</a>
+            <a href="sobre_mim.html" class="cabecalho__nav_link">Sobre Mim</a> 
+            <a href="curriculo.html" class="cabecalho__nav_link">Currículo</a> 
+    </header>
+
+    <section class="color_picker_selection">
+        <div class="cabecalho__nav__color_select">
+            <img class="cabecalho__nav__color_select__icon" id="bt_color_select" src="/assets/color_picker.svg"
+                alt="conta gotas">
+            <button class="cabecalho__nav__color_select__button" id="button_default_blue"
+                onclick="selecionaCor(blue)"></button>
+            <button class="cabecalho__nav__color_select__button" id="button_red" onclick="selecionaCor(red)"></button>
+            <button class="cabecalho__nav__color_select__button" id="button_purple"
+                onclick="selecionaCor(purple)"></button>
+            <button class="cabecalho__nav__color_select__button" id="button_green"
+                onclick="selecionaCor(green)"></button>
+            <input type="color" id="seletorDeCores" style="display: none; ">
+            <script>
+                const root = document.documentElement;
+    
+                const blue = getComputedStyle(root).getPropertyValue('--cor-terciaria');
+                const red = getComputedStyle(root).getPropertyValue('--cor-2');
+                const purple = getComputedStyle(root).getPropertyValue('--cor-3');
+                const green = getComputedStyle(root).getPropertyValue('--cor-4');
+    
+                function selecionaCor(cor) {
+                    document.documentElement.style.setProperty("--cor-terciaria", cor);
+                }
+    
+                const botaoAbrir = document.getElementById('bt_color_select');
+                const seletorDeCores = document.getElementById('seletorDeCores');
+    
+                // Adicione um evento de clique ao botão
+                botaoAbrir.addEventListener('click', () => {
+                    // Abra o seletor de cores ao clicar no botão
+                    seletorDeCores.click();
+                });
+    
+                // Adicione um evento para lidar com a seleção de cor
+                seletorDeCores.addEventListener('input', () => {
+                    // Obtenha a cor selecionada pelo usuário
+                    const corSelecionada = seletorDeCores.value;
+    
+                    // Faça algo com a cor selecionada, por exemplo, imprima no console
+                    console.log('Cor selecionada:', corSelecionada);
+                    selecionaCor(corSelecionada);
+                });
+            </script>
+        </div>
+    </section>
+    
+    <main class="container">
+        <section class="container__conteudo">
+            <h1 class="container__conteudo_titulo_indice">Currículo</h1>
+            <p class="container__conteudo_texto">Olá! Sou Leonardo Moreira, desenvolvedor Front-end com especialidade
+                em React,
+                HTML e CSS. Ajudo pequenos negócios e designers a
+                colocarem em prática boas ideias.</p>
+            <h1 class="container__conteudo_titulo">Experiências</h1>
+            <p class="container__conteudo_texto">Algumas de minhas experiências:</p>
+            <ul class="container__conteudo_texto">
+                <li>Experiência 1</li>
+                <ul style="margin-left: 30px; margin-top: 5px; font-size: 18px; color: rgb(210, 210, 210);">
+                    <li>Monstagem de computadores</li>
+                    <li>Atualização de Infraestrutura</li>
+                </ul>
+                <br>
+                <li>Experiência 2</li>
+                <ul style="margin-left: 30px; margin-top: 5px; font-size: 18px; color: rgb(210, 210, 210);">
+                    <li>Manutenção de redes</li>
+                    <li>Desenvolvimento de Software</li>
+                </ul>
+                <br>
+                <li>Experiência 3</li>
+                <ul style="margin-left: 30px; margin-top: 5px; font-size: 18px; color: rgb(210, 210, 210);">
+                    <li>Análise de dados</li>
+                </ul>
+            </ul>
+            <h1 class="container__conteudo_titulo">Estudos</h1>
+            <ul class="container__conteudo_texto">
+                <li>Análise e desenvolvimento de sistemas - <strong style="color: #22D4FD;">Centro Universitário ENIAC</strong></li>
+                <br>
+                <li>Controle de Qualidade - <strong style="color: #22D4FD;">SENAI Hermenegildo Campos de Almeida</strong></li>
+            </ul>
+        </section>
+
+        <img class="container__imagem" src="/assets/imagem.png" alt="Perfil Leonardo">
+    </main>
+
+    <footer class="rodape">
+        <p class="rodape__texto">Desenvolvido por Alura.</p>
+    </footer>
+
+</body>
+
+</html>

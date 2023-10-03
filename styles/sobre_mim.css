@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {  
+    box-sizing: border-box;
+    background-color: rgb(10, 10, 10);
+}
+
+.cabecalho {
+    padding: 2% 10% 2% 10%;
+    display: flex;
+    align-items: center;
+    background-color: #22D4FD;
+}
+
+.cabecalho__nav {
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__nav_link {
+    color: rgb(10, 10, 10);
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    transition: 0.3s;
+}
+
+.cabecalho__nav_link:hover {
+    color: #F6F6F6;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 6% 10%;
+}
+
+.container__conteudo {
+    display: flex;
+    flex-direction: column;
+    width: 615px;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.container__conteudo_titulo {    
+    font-size: 36px;
+    font-weight: 400;
+    color: #F6F6F6;
+    font-family: 'Krona One', sans-serif;
+    line-height: 56px;
+}.destaque__titulo {
+    color: #22D4FD;
+    font-weight: 400;
+}   
+
+.container__conteudo_texto {
+    font-size: 24px;
+    color: #F6F6F6;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 36px;
+}
+
+.container__links {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.container__links__texto{
+    font-size: 24px;
+    font-weight: 400;
+    color: #F6F6F6;
+    font-family: 'Krona One', sans-serif;
+}
+
+.container__links__botao {
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    gap: 16px;
+    width: 378px;
+    border: #22D4FD solid 2px;
+    border-radius: 8px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #F6F6F6;
+    text-decoration: none;
+    padding: 21.5px 0;  
+    transition: 0.3s; 
+}
+
+.container__links__botao:hover {
+    background-color: #272727;
+    padding: 25px 10px;
+
+}
+
+.rodape {
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #22D4FD;
+}
+
+.rodape__texto {
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
