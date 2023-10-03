@@ -241,4 +241,7 @@ body {
     .cabecalho__nav_link {
         font-size: 1.2rem;
     }
+     .container__links__texto {
+        font-size: 1.3rem;
+    }
 }
