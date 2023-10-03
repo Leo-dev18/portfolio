@@ -160,7 +160,7 @@ body {
     justify-content: center;
     align-items: center ;
     gap: 16px;
-    width: 50%;
+    width: 70%;
     border: var(--cor-terciaria) solid 2px;
     border-radius: 8px;
     text-align: center;
